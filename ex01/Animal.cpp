@@ -1,6 +1,6 @@
 #include "Animal.hpp"
 
-Animal::Animal() : type("animal") 
+Animal::Animal() : type("a") 
 {
   std::cout << "Animal default constructor" << std::endl;
 }
@@ -11,15 +11,15 @@ Animal::Animal(std::string type) : type(type)
   this->type = type;
 }
 
-Animal::Animal(const Animal &animal) 
+Animal::Animal(const Animal &a) 
 {
-  this->type = animal.type;
+  this->type = a.type;
   std::cout << "Animal copy constructor" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &animal)
+Animal &Animal::operator=(const Animal &a)
 {
-  this->type = animal.type;
+  this->type = a.type;
   std::cout << "Animal copy assignment operator called" << std::endl;
   return *this;
 }
@@ -36,7 +36,7 @@ std::string Animal::getType() const
 
 void Animal::makeSound() const 
 {
-  std::cout << "The animal is making a sound" << std::endl;
+  std::cout << "The a is making a sound" << std::endl;
 }
 
 void Animal::setIdea(int index, const std::string& idea) {

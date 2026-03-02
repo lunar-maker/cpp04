@@ -26,35 +26,24 @@ int main()
   animals[2]->setIdea(1, "cat idea 2");
   animals[2]->setIdea(2, "cat idea 3");
 
-  {
-    std::cout << "-------------------------------------------------------------\n";
     Dog dog2;
 
     dog2 = *(Dog*)animals[0];
     std::cout << "temp dog ---> " << dog2.getIdea(0) << std::endl;
     std::cout << "temp dog ---> " << dog2.getIdea(1) << std::endl;
     std::cout << "temp dog ---> " << dog2.getIdea(2) << std::endl;
-  }
 
-  {
-    std::cout << "-------------------------------------------------------------\n";
     Cat cat2(*(Cat*)animals[2]);
 
     std::cout << "temp cat ---> " << cat2.getIdea(0) << std::endl;
     std::cout << "temp cat ---> " << cat2.getIdea(1) << std::endl;
     std::cout << "temp cat ---> " << cat2.getIdea(2) << std::endl;
-  }
-
-  std::cout << "-------------------------------------------------------------\n";
   std::cout << "dog ---> " << animals[0]->getIdea(0) << std::endl;
   std::cout << "dog ---> " << animals[0]->getIdea(1) << std::endl;
   std::cout << "dog ---> " << animals[0]->getIdea(2) << std::endl;
-
-  std::cout << "-------------------------------------------------------------\n";
   std::cout << "cat ---> " << animals[2]->getIdea(0) << std::endl;
   std::cout << "cat ---> " << animals[2]->getIdea(1) << std::endl;
   std::cout << "cat ---> " << animals[2]->getIdea(2) << std::endl;
-  std::cout << "-------------------------------------------------------------\n";
 
   for(int i = 0; i < size; i++)
     delete animals[i];

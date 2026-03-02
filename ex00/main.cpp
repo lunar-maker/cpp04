@@ -10,15 +10,10 @@ int main()
 
   WrongAnimal *wrongCat = new WrongCat("wrong cat");
 
-  std::cout << "-----------------------------" << std::endl;
   wrongCat->makeSound();
-  std::cout << "-----------------------------" << std::endl;
   dog->makeSound();
-  std::cout << "-----------------------------" << std::endl;
   cat->makeSound();
-  std::cout << "-----------------------------" << std::endl;
   animal->makeSound();
-  std::cout << "-----------------------------" << std::endl;
 
   delete animal;
   delete dog;
